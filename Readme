@@ -1,0 +1,11 @@
+Hallo,
+
+My name is Andrew.  I am currently a Postdoctoral fellow at the Université of Lyon in, well, Lyon.  My work focuses on plate reconstructions for the last 1 Ga and understanding how the Earth has evolved through this time.  I am currently working on coupling geochemical and petrological models for serpentinisation reactions to plate models to understand fluxes and storage of hydrogen and methane for the Mesozoic and Cenozoic.  This work sort of crosses over into characterisation of oceanic lithosphere to measure long term fluxes and storage of carbon, serpentinite, sulphur, water etc. in ocean basins for the past 330 Ma.
+
+This repository contains a series of scripts, metadata, code etc. that pertain to work I have published.  You will find most folders correspond to a previous publication, though any small little general snippets that I have found useful are also included separately (e.g. time-space plot for palaeomagnetic data). Within each folder will be a Jupyter Notebook and the associated metadata that is necessary to recreate key plots from these publications.  Where possible I have designed the notebooks to be general, so that they can (and hopefully will be) used to analyse other plate reconstructions, or adapted for other purposes.  The basis of a lot of the code is the python library called pyGPlates (https://www.gplates.org/docs/pygplates/).  Some key references for the work that is included here:
+
+Merdith, A.S., Collins, A.S., Williams, S.E., Pisarevsky, S., Foden, J.D., Archibald, D.B., Blades, M.L., Alessio, B.L., Armistead, S., Plavsa, D., Clark, C. and Müller, R.D., 2017. A full-plate global reconstruction of the Neoproterozoic. Gondwana Research, 50, pp.84-134.
+
+Merdith, A.S., Williams, S.E., Müller, R.D. and Collins, A.S., 2017. Kinematic constraints on the Rodinia to Gondwana transition. Precambrian Research, 299, pp.132-150.
+
+Merdith, A.S., Williams, S.E., Brune, S., Collins, A.S. and Müller, R.D., 2019. Rift and plate boundary evolution across two supercontinent cycles. Global and Planetary Change, 173, pp.1-14.

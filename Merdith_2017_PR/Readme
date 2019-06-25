@@ -7,3 +7,11 @@ Merdith, A.S., Williams, S.E., Müller, R.D. and Collins, A.S., 2017. Kinematic 
 
 The metadata includes the GPlates model of the above publication.
 
+The folder contains a single notebook which plots the continental configuration of Australia-South China-Laurentia as suggested in Li et al. (2008), based on the 'Missing-Link Model' of Rodinia. The notebook also extracts (and plots) flow lines depicting the motion of South China relative to Laurentia as well as the Euler poles that describe the motion.
+
+References
+
+Li, Z.X., Bogdanova, S.V., Collins, A.S., Davidson, A., De Waele, B., Ernst, R.E., Fitzsimons, I.C.W., Fuck, R.A., Gladkochub, D.P., Jacobs, J. and Karlstrom, K.E., 2008. Assembly, configuration, and break-up history of Rodinia: a synthesis. Precambrian research, 160(1-2), pp.179-210.
+
+Merdith, A.S., Williams, S.E., Müller, R.D. and Collins, A.S., 2017. Kinematic constraints on the Rodinia to Gondwana transition. Precambrian Research, 299, pp.132-150.
+

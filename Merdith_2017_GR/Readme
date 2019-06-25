@@ -7,5 +7,7 @@ Merdith, A.S., Collins, A.S., Williams, S.E., Pisarevsky, S., Foden, J.D., Archi
 The metadata includes the GPlates model of the above publication.
 
 Notebooks include:
-  Plotting continental area vs latitude
-  Plotting subduction zone length vs latitude
+  Plotting continental area and subduction length vs latitude
+  Number and size of continents through time
+  Basic extraction and plotting of plate boundary lengths
+  RMS plate velocities
