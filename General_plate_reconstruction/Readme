@@ -1,0 +1,12 @@
+Readme for General_plate_reoncstruction
+
+This folder contains a series of notebooks and associated metadata designed to perform basic analysis of plate reconstructions with pyGPlates.  Notebooks and examples include:
+
+-altering gpml files
+-converting plate IDs in gpml files and rotation files
+-extracting lat/longs from subduction zones
+-making virtual geomagnetic poles (VGP) for visualising palaeomagnetic data in GPlates
+-making a time-space palaeomagnetic data plot
+-plotting and visualising plate hierarchies
+
+Some of these scripts are adapted from work done by Simon Williams (www.github.com/siwil22) and Michael Tetley (www.github.com/headmetal).

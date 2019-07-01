@@ -1,0 +1,10 @@
+Readme for Merdith_2019_GPC
+
+This folder contains a series of notebooks and associated metadata designed to recreate most plots and figures from:
+
+Merdith, A.S., Williams, S.E., Brune, S., Collins, A.S. and Müller, R.D., 2019. Rift and plate boundary evolution across two supercontinent cycles. Global and Planetary Change, 173, pp.1-14..
+
+The metadata includes the GPlates files of the above publication.
+
+Notebooks include:
+	Extracting and plotting continental perimeter, area through time (connectedness of continental crust)
