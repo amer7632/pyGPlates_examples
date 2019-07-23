@@ -6,7 +6,6 @@
 *-checkpoint.ipynb
 *.DS_Store
 *.pdf
-*.csv
 *.xlsx
 *.svg
 *.history
