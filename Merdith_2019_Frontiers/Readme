@@ -1,0 +1,10 @@
+Readme for Merdith_2019_Frontiers
+
+This folder contains a series of notebooks and associated metadata designed to recreate most plots and figures from:
+
+Merdith, A.S., Atkins, S.E., and Tetley, M.G. (accepted for publication). Tectonic controls on carbon and serpentinite storage in subducted upper oceanic lithosphere for the past 320 Ma. Frontiers: Earth Science.
+
+The metadata includes the GPlates files and summary of plate boundary network used in the above manuscript. It will be progressively updated over the next few months. Most of the scripts were written by me, however some were written by Suzanne Atkins, Simon Williams, John Cannon and Nicky Wright.
+
+Notebooks include:
+	Distributions of spreading rate through time
