@@ -315,7 +315,7 @@ def carbon_content_inter_fast(samples, spreading_rate, bottom_water_temp):
 
     #bottom water controls only for upper 300 m of oceanic crust(i.e. upper volcs and lower volcs)
     #Gills and Coogan, 2011
-
+	#these are in wt%
     upper_volc = 2.5 * bottom_water_temperature_multiplier
     lower_volc = 0.171 * bottom_water_temperature_multiplier
     transition = 0.073
