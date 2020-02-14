@@ -9,3 +9,6 @@
 *.svg
 *.history
 *.pyc
+*.grd
+*.gmt
+*.nc
