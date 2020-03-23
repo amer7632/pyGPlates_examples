@@ -1,4 +1,7 @@
 
+*
+!/**/
+!*.*
 *.gmtcommands
 *.ipynb_checkpoints
 */.ipynb_checkpoints/*
@@ -9,12 +12,6 @@
 *.svg
 *.history
 *.pyc
-*.grd
-*.gmt
-*.nc
-*
-!/**/
-!*.*
 *.grd
 *.gmt
 *.nc

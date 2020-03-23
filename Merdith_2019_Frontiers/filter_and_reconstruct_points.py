@@ -301,14 +301,14 @@ def detect_collision_using_collision_parameters(
         return False
 
 
-def exporting(x,y,z, time, savedir):
+def exporting(x,y,z, time, savedir, POSR=True):
     '''
     this function just neatens the exporting process because it's messy
     '''
     lon = x
     lat = y
     zvals = z
-    #export_list_C = []
+    export_list_C = []
     export_list_serp = []
     export_list_total = []
     export_list_upper = []
@@ -330,7 +330,7 @@ def exporting(x,y,z, time, savedir):
     #9 age
 
     for i,j,k in itertools.izip(lon,lat,zvals):
-        #export_list_C.append((i,j,np.float(k[0])))
+        export_list_C.append((i,j,np.float(k[0])))
         export_list_serp.append((i,j,np.float(k[1])))
         export_list_total.append((i,j,np.float(k[2])))
         export_list_upper.append((i,j,np.float(k[3])))
@@ -340,16 +340,21 @@ def exporting(x,y,z, time, savedir):
         export_list_SR.append((i,j,np.float(k[8])))
         export_list_age.append((i,j,np.float(k[9]-time)))
 
-
-    #write_xyz_file('%sPOSR_C_%s_Ma' % (savedir, time), export_list_C)
-    write_xyz_file('%sPMSR_Serp_%s_Ma' % (savedir,time), export_list_serp)
-    write_xyz_file('%sPMSR_total_%s_Ma' % (savedir,time), export_list_total)
-    write_xyz_file('%sPMSR_upper_%s_Ma' % (savedir,time), export_list_upper)
-    write_xyz_file('%sPMSR_lower_%s_Ma' % (savedir,time), export_list_lower)
-    write_xyz_file('%sPMSR_dykes_%s_Ma' % (savedir,time), export_list_dykes)
-    write_xyz_file('%sPMSR_gabbro_%s_Ma' % (savedir,time), export_list_gabbro)
-    write_xyz_file('%sPMSR_SR_%s_Ma' % (savedir,time), export_list_SR)
-    write_xyz_file('%sPMSR_age_%s_Ma' % (savedir,time), export_list_age)
+    if POSR:
+        print 'POSR'
+        key='POSR'
+    else:
+        print 'PMSR'
+        key='PMSR'
+    write_xyz_file('%s%s_C_%s_Ma' % (savedir,key, time), export_list_C)
+    write_xyz_file('%s%s_Serp_%s_Ma' % (savedir,key,time), export_list_serp)
+    write_xyz_file('%s%s_total_%s_Ma' % (savedir,key,time), export_list_total)
+    write_xyz_file('%s%s_upper_%s_Ma' % (savedir,key,time), export_list_upper)
+    write_xyz_file('%s%s_lower_%s_Ma' % (savedir,key,time), export_list_lower)
+    write_xyz_file('%s%s_dykes_%s_Ma' % (savedir,key,time), export_list_dykes)
+    write_xyz_file('%s%s_gabbro_%s_Ma' % (savedir,key,time), export_list_gabbro)
+    write_xyz_file('%s%s_SR_%s_Ma' % (savedir,key,time), export_list_SR)
+    write_xyz_file('%s%s_age_%s_Ma' % (savedir,key,time), export_list_age)
 
     return
 
