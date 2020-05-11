@@ -15,3 +15,15 @@
 *.grd
 *.gmt
 *.nc
+Merdith_2019_Frontiers/output/results/C_MOR_PMSR_batch.csv
+Merdith_2019_Frontiers/output/results/C_MOR_POSR_batch.csv
+Merdith_2019_Frontiers/output/results/C_SUB_PMSR_batch.csv
+Merdith_2019_Frontiers/output/results/C_SUB_POSR_batch.csv
+Merdith_2019_Frontiers/output/results/carbon_mass_POSR.csv
+Merdith_2019_Frontiers/output/results/serp_mass_POSR.csv
+Merdith_2019_Frontiers/output/results/Serp_MOR_PMSR_batch.csv
+Merdith_2019_Frontiers/output/results/Serp_MOR_POSR_batch.csv
+Merdith_2019_Frontiers/output/results/Serp_SUB_PMSR_batch.csv
+Merdith_2019_Frontiers/output/results/Serp_SUB_POSR_batch.csv
+Merdith_2019_Frontiers/Sample_Data/C_storage_2020-03-13_POSR.p
+Merdith_2019_Frontiers/Sample_Data/C_storage_2020-03-13_PMSR.p
