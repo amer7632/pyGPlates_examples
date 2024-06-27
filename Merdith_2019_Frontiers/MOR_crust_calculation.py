@@ -64,7 +64,7 @@ def crust_characterisation(start, stop, step, df, samples, bottom_water_temperat
 
     #inititate loop to extract data
     for time in times:
-        print time,  'Ma'
+        print( time,  'Ma')
         #we only need to cut up spreading ridges by velocity
         subset1 = df[(df['Time_Ma']>=time)
                   & (df['Time_Ma']<(time+time_resolution))

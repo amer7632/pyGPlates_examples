@@ -6,14 +6,14 @@ import healpy
 def create_gpml_crustal_thickness(longitude_array,latitude_array,thickness,filename=None):
 
     multi_point = pygplates.MultiPointOnSphere(zip(latitude_array,longitude_array))
-
+    
     scalar_coverages = {
         pygplates.ScalarType.create_gpml('CrustalThickness'): thickness}
-
+    
     ct_feature = pygplates.Feature()
     ct_feature.set_geometry((multi_point,scalar_coverages))
     ct_feature.set_name('Crustal Thickness')
-
+    
     output_feature_collection = pygplates.FeatureCollection(ct_feature)
 
     if filename is not None:
@@ -24,11 +24,11 @@ def create_gpml_crustal_thickness(longitude_array,latitude_array,thickness,filen
 
 def create_gpml_velocity_feature(longitude_array,latitude_array,filename=None,feature_type=None):
 # function to make a velocity mesh nodes at an arbitrary set of points defined in Lat
-# Long and Lat are assumed to be 1d arrays.
+# Long and Lat are assumed to be 1d arrays. 
 
     multi_point = pygplates.MultiPointOnSphere(zip(latitude_array,longitude_array))
 
-    # Create a feature containing the multipoint feature.
+    # Create a feature containing the multipoint feature. 
     # optionally, define as 'MeshNode' type, so that GPlates will recognise it as a velocity layer
     if feature_type=='MeshNode':
         meshnode_feature = pygplates.Feature(pygplates.FeatureType.create_from_qualified_string('gpml:MeshNode'))
@@ -36,11 +36,11 @@ def create_gpml_velocity_feature(longitude_array,latitude_array,filename=None,fe
     else:
         meshnode_feature = pygplates.Feature()
         meshnode_feature.set_name('Multipoint Feature')
-
+    
     meshnode_feature.set_geometry(multi_point)
-
+    
     output_feature_collection = pygplates.FeatureCollection(meshnode_feature)
-
+    
     if filename is not None:
         output_feature_collection.write(filename)
     else:
@@ -55,7 +55,7 @@ def create_gpml_healpix_mesh(nSide,filename=None,feature_type=None):
     othetas = np.pi/2-othetas
     ophis[ophis>np.pi] -= np.pi*2
 
-    lats = np.degrees(othetas)
+    lats = np.degrees(othetas) 
     lons = np.degrees(ophis)
 
     # call the function to create a multipoint feature, with user-defined type
@@ -81,35 +81,3 @@ def create_gpml_regular_long_lat_mesh(Sampling=1,filename=None,feature_type=None
         output_feature_collection.write(filename)
     else:
         return output_feature_collection
-
-def run_grid_pip(time,points,polygons,rotation_model):
-
-    reconstructed_polygons = []
-    pygplates.reconstruct(polygons,rotation_model,reconstructed_polygons,time)
-
-    rpolygons = []
-    for polygon in reconstructed_polygons:
-        #print polygon.get_description()
-        #if polygon.get_reconstructed_geometry() == 'PolygonOnSphere':
-        if polygon.get_reconstructed_geometry():
-            #pri#nt polygon.get_reconstructed_geometry()
-            rpolygons.append(polygon.get_reconstructed_geometry())
-
-
-    polygons_containing_points = points_in_polygons.find_polygons(points, rpolygons)
-
-    lat = []
-    lon = []
-    zval = []
-
-    for pcp,point in zip(polygons_containing_points,points):
-        lat.append(point.get_latitude())
-        lon.append(point.get_longitude())
-        if pcp is not None:
-            zval.append(1)
-        else:
-            zval.append(0)
-
-    bi = np.array(zval).reshape(181,361)
-
-    return bi

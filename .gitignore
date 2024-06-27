@@ -15,6 +15,7 @@
 *.grd
 *.gmt
 *.nc
+*.zip
 Merdith_2019_Frontiers/output/results/C_MOR_PMSR_batch.csv
 Merdith_2019_Frontiers/output/results/C_MOR_POSR_batch.csv
 Merdith_2019_Frontiers/output/results/C_SUB_PMSR_batch.csv
